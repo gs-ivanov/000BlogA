@@ -15,4 +15,12 @@ class SecurityController extends Controller
     {
         return $this->render('security/login.html.twig');
     }
+
+    /**
+     * @Route("/logout", name="security_logout")
+     * @throws \Exception
+     */
+    public function logout(){
+        throw new \Exception("Logout failed!");
+    }
 }

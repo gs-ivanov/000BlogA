@@ -22,6 +22,7 @@ class ArticleController extends Controller
     {
         $article = new Article();
         $form = $this->createForm(ArticleType::class, $article);
+
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
@@ -61,13 +62,13 @@ class ArticleController extends Controller
      */
     public function viewArticle($id)
     {
-
         $article = $this
             ->getDoctrine()
             ->getRepository(Article::class)
             ->find($id);
 
 //        $article->setViewCount($article->getViewCount() + 1);
+        $article->setTitle($article->getTitle());
         $em = $this->getDoctrine()->getManager();
         $em->persist($article);
         $em->flush();

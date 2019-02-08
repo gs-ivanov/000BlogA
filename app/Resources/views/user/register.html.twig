@@ -7,9 +7,9 @@
         </div>
     {% endfor %}
     <form name="register" method="post">
-        Email: <input type="text" name="user[email]" value="pesho@abv.bg"/><br />
+        Email: <input type="text" name="user[email]" value="@abv.bg"/><br />
         Password: <input type="text" name="user[password]" value="123"/><br />
-        FullName: <input type="text" name="user[fullName]" value="Petrov P."/><br /><br />
+        FullName: <input type="text" name="user[fullName]" value=""/><br /><br />
 
         <input type="hidden" name="_csrf_token" value="{{ csrf_token('register') }}"/>
         <input type="submit" value="Register">

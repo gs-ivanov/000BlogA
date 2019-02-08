@@ -45,22 +45,22 @@
                                     New Article
                                 </a>
                             </li>
-                            <li>
-                                <a href="{{ path('article_create') }}">
-                                    View More Article
-                                </a>
-                            </li>
+                            {#<li>#}
+                                {#<a href="{{ path('article_create') }}">#}
+                                    {#View More Article#}
+                                {#</a>#}
+                            {#</li>#}
 
                             {#<li>#}
                                 {#<a href="{{ path('user_profile') }}">#}
                                     {#My Profile#}
                                 {#</a>#}
                             {#</li>#}
-                            {#<li>#}
-                                {#<a href="{{ path('security_logout') }}">#}
-                                    {#Logout#}
-                                {#</a>#}
-                            {#</li>#}
+                            <li>
+                                <a href="{{ path('security_logout') }}">
+                                    Logout
+                                </a>
+                            </li>
                         {% else %}
                             <li>
                                 <a href="{{ path('user_register') }}">

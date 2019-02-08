@@ -2,8 +2,8 @@
 
 {% block body %}
 <form name="authenticate" action="{{ path('security_login') }}" method="post">
-    <input type="text" name="_username">
-    <input type="text" name="_password">
+    <input type="text" name="_username"  value="@abv.bg">
+    <input type="text" name="_password"  value="123">
     <input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}"/>
     <input type="submit">
 </form>
